@@ -181,14 +181,20 @@ function closeChampionsList(event)
 			growthAttackDamage = parseFloat(data.data[name].stats.attackdamageperlevel);
 			growthAttackSpeed = parseFloat(data.data[name].stats.attackspeedperlevel);
 
-			 document.getElementById("hereAttackDamage").innerHTML = baseAttackDamage;
-			 // document.getElementById("hereAbilityPower").innerHTML = data.data[name].stats.attackdamage;
-			 document.getElementById("hereArmor").innerHTML = baseArmor;
-			 document.getElementById("hereMagicResistance").innerHTML = baseSpellBlock;
-			 document.getElementById("hereAttackSpeed").innerHTML = baseAttackSpeed;
-			 // document.getElementById("hereAbilityHaste").innerHTML = data.data[name].stats.attackdamage;
-			 document.getElementById("hereCriticalChance").innerHTML = baseCrit;
-			 document.getElementById("hereMovementSpeed").innerHTML = baseMoveSpeed;
+			document.getElementById("hereAttackDamage").innerHTML = baseAttackDamage;
+			// document.getElementById("hereAbilityPower").innerHTML = data.data[name].stats.attackdamage;
+			document.getElementById("hereAttackSpeed").innerHTML = baseAttackSpeed;
+			document.getElementById("hereCriticalChance").innerHTML = baseCrit;
+			document.getElementById("hereHealthPoints").innerHTML = baseHP;
+			document.getElementById("hereHealthRegen").innerHTML = baseHPRegen;
+			document.getElementById("hereManaPoints").innerHTML = baseMP;
+			document.getElementById("hereManaRegen").innerHTML = baseMPRegen;
+			document.getElementById("hereArmor").innerHTML = baseArmor;
+			document.getElementById("hereMagicResistance").innerHTML = baseSpellBlock;
+
+			// document.getElementById("hereAbilityHaste").innerHTML = ;
+
+			document.getElementById("hereMovementSpeed").innerHTML = baseMoveSpeed;
 
 			 attackDamagePerLevel = data.data[name].stats.attackdamageperlevel;
 		})
@@ -245,11 +251,17 @@ function closeChampionsList(event)
 
 			document.getElementById("hereAttackDamage2").innerHTML = baseAttackDamage2;
 			// document.getElementById("hereAbilityPower2").innerHTML = data.data[name].stats.attackdamage;
+			document.getElementById("hereAttackSpeed2").innerHTML = baseAttackSpeed2;
+			document.getElementById("hereCriticalChance2").innerHTML = baseCrit2;
+			document.getElementById("hereHealthPoints2").innerHTML = baseHP2;
+			document.getElementById("hereHealthRegen2").innerHTML = baseHPRegen2;
+			document.getElementById("hereManaPoints2").innerHTML = baseMP2;
+			document.getElementById("hereManaRegen2").innerHTML = baseMPRegen2;
 			document.getElementById("hereArmor2").innerHTML = baseArmor2;
 			document.getElementById("hereMagicResistance2").innerHTML = baseSpellBlock2;
-			document.getElementById("hereAttackSpeed2").innerHTML = baseAttackSpeed2;
+
 			// document.getElementById("hereAbilityHaste2").innerHTML = ;
-			document.getElementById("hereCriticalChance2").innerHTML = baseCrit2;
+
 			document.getElementById("hereMovementSpeed2").innerHTML = baseMoveSpeed2;
 		})
 		.catch(error => console.error(error));
@@ -280,17 +292,31 @@ function calculateStatsWithLevel(level)
 	document.getElementById("hereAttackDamage").textContent = "0";
 	document.getElementById("hereAttackDamage").textContent = Math.round(baseAttackDamage + growthAttackDamage * (selectedLevel - 1) * (0.7025 + 0.0175 * (selectedLevel - 1)));
 
+	document.getElementById("hereAttackSpeed").textContent = "0";
+	document.getElementById("hereAttackSpeed").textContent = (baseAttackSpeed * (1 + (growthAttackSpeed / 100) * ((selectedLevel - 1) * (0.7025 + 0.0175 * (selectedLevel - 1))))).toFixed(3);
+
+	document.getElementById("hereCriticalChance").textContent = "0";
+	document.getElementById("hereCriticalChance").textContent = Math.round(baseCrit + growthCrit * (selectedLevel - 1) * (0.7025 + 0.0175 * (selectedLevel - 1)));
+
+	document.getElementById("hereHealthPoints").textContent = "0";
+	document.getElementById("hereHealthPoints").textContent = Math.round(baseHP + growthHP * (selectedLevel - 1) * (0.7025 + 0.0175 * (selectedLevel - 1)));
+
+	document.getElementById("hereHealthRegen").textContent = "0";
+	document.getElementById("hereHealthRegen").textContent = Math.round(baseHPRegen + growthHPRegen * (selectedLevel - 1) * (0.7025 + 0.0175 * (selectedLevel - 1)));
+
+	document.getElementById("hereManaPoints").textContent = "0";
+	document.getElementById("hereManaPoints").textContent = Math.round(baseMP + growthMP * (selectedLevel - 1) * (0.7025 + 0.0175 * (selectedLevel - 1)));
+
+	document.getElementById("hereManaRegen").textContent = "0";
+	document.getElementById("hereManaRegen").textContent = Math.round(baseMPRegen + growthMPRegen * (selectedLevel - 1) * (0.7025 + 0.0175 * (selectedLevel - 1)));
+
 	document.getElementById("hereArmor").textContent = "0";
 	document.getElementById("hereArmor").textContent = Math.round(baseArmor + growthArmor * (selectedLevel - 1) * (0.7025 + 0.0175 * (selectedLevel - 1)));
 
 	document.getElementById("hereMagicResistance").textContent = "0";
 	document.getElementById("hereMagicResistance").textContent = Math.round(baseSpellBlock + growthSpellBlock * (selectedLevel - 1) * (0.7025 + 0.0175 * (selectedLevel - 1)));
 
-	document.getElementById("hereAttackSpeed").textContent = "0";
-	document.getElementById("hereAttackSpeed").textContent = (baseAttackSpeed * (1 + (growthAttackSpeed / 100) * ((selectedLevel - 1) * (0.7025 + 0.0175 * (selectedLevel - 1))))).toFixed(3);
 
-	document.getElementById("hereCriticalChance").textContent = "0";
-	document.getElementById("hereCriticalChance").textContent = Math.round(baseCrit + growthCrit * (selectedLevel - 1) * (0.7025 + 0.0175 * (selectedLevel - 1)));
 
 	document.getElementById("levelList").classList.remove("show");
 	document.getElementById("levelbtn").innerHTML = "Level "+ selectedLevel +"";
@@ -306,17 +332,29 @@ function calculateStatsWithLevelAgain(level)
 	document.getElementById("hereAttackDamage2").textContent = "0";
 	document.getElementById("hereAttackDamage2").textContent = Math.round(baseAttackDamage2 + growthAttackDamage2 * (selectedLevel2 - 1) * (0.7025 + 0.0175 * (selectedLevel2 - 1)));
 
-	document.getElementById("hereArmor2").textContent = "0";
-	document.getElementById("hereArmor2").textContent = Math.round(baseArmor2 + growthArmor2 * (selectedLevel2 - 1) * (0.7025 + 0.0175 * (selectedLevel2 - 1)));
-
-	document.getElementById("hereMagicResistance2").textContent = "0";
-	document.getElementById("hereMagicResistance2").textContent = Math.round(baseSpellBlock2 + growthSpellBlock2 * (selectedLevel2 - 1) * (0.7025 + 0.0175 * (selectedLevel2 - 1)));
-
 	document.getElementById("hereAttackSpeed2").textContent = "0";
 	document.getElementById("hereAttackSpeed2").textContent = (baseAttackSpeed2 * (1 + (growthAttackSpeed2 / 100) * ((selectedLevel2 - 1) * (0.7025 + 0.0175 * (selectedLevel2 - 1))))).toFixed(3);
 
 	document.getElementById("hereCriticalChance2").textContent = "0";
 	document.getElementById("hereCriticalChance2").textContent = Math.round(baseCrit2 + growthCrit2 * (selectedLevel2 - 1) * (0.7025 + 0.0175 * (selectedLevel2 - 1)));
+
+	document.getElementById("hereHealthPoints2").textContent = "0";
+	document.getElementById("hereHealthPoints2").textContent = Math.round(baseHP2 + growthHP2 * (selectedLevel2 - 1) * (0.7025 + 0.0175 * (selectedLevel2 - 1)));
+
+	document.getElementById("hereHealthRegen2").textContent = "0";
+	document.getElementById("hereHealthRegen2").textContent = Math.round(baseHPRegen2 + growthHPRegen2 * (selectedLevel2 - 1) * (0.7025 + 0.0175 * (selectedLevel2 - 1)));
+
+	document.getElementById("hereManaPoints2").textContent = "0";
+	document.getElementById("hereManaPoints2").textContent = Math.round(baseMP2 + growthMP2 * (selectedLevel2 - 1) * (0.7025 + 0.0175 * (selectedLevel2 - 1)));
+
+	document.getElementById("hereManaRegen2").textContent = "0";
+	document.getElementById("hereManaRegen2").textContent = Math.round(baseMPRegen2 + growthMPRegen2 * (selectedLevel2 - 1) * (0.7025 + 0.0175 * (selectedLevel2 - 1)));
+
+	document.getElementById("hereArmor2").textContent = "0";
+	document.getElementById("hereArmor2").textContent = Math.round(baseArmor2 + growthArmor2 * (selectedLevel2 - 1) * (0.7025 + 0.0175 * (selectedLevel2 - 1)));
+
+	document.getElementById("hereMagicResistance2").textContent = "0";
+	document.getElementById("hereMagicResistance2").textContent = Math.round(baseSpellBlock2 + growthSpellBlock2 * (selectedLevel2 - 1) * (0.7025 + 0.0175 * (selectedLevel2 - 1)));
 
 	document.getElementById("levelList2").classList.remove("show");
 	document.getElementById("levelbtn2").innerHTML = "Level "+ selectedLevel2 +"";
@@ -340,6 +378,18 @@ function compareCalculationsBetweenChampionStats()
 
 	const ms1 = parseFloat(document.getElementById("hereMovementSpeed").textContent.trim());
 	const ms2 = parseFloat(document.getElementById("hereMovementSpeed2").textContent.trim());
+
+	const hp1 = parseFloat(document.getElementById("hereHealthPoints").textContent.trim());
+	const hp2 = parseFloat(document.getElementById("hereHealthPoints2").textContent.trim());
+
+	const hpRegen1 = parseFloat(document.getElementById("hereHealthRegen").textContent.trim());
+	const hpRegen2 = parseFloat(document.getElementById("hereHealthRegen2").textContent.trim());
+
+	const mp1 = parseFloat(document.getElementById("hereManaPoints").textContent.trim());
+	const mp2 = parseFloat(document.getElementById("hereManaPoints2").textContent.trim());
+
+	const mpRegen1 = parseFloat(document.getElementById("hereManaRegen").textContent.trim());
+	const mpRegen2 = parseFloat(document.getElementById("hereManaRegen2").textContent.trim());
 
 	if (ad1 > ad2)
 	{
@@ -422,5 +472,69 @@ function compareCalculationsBetweenChampionStats()
 	{
 		document.getElementById("hereMovementSpeed").style.backgroundColor = "";
 		document.getElementById("hereMovementSpeed2").style.backgroundColor = "";
+	}
+
+	if (hp1 > hp2)
+	{
+		document.getElementById("hereHealthPoints").style.backgroundColor = "#8fbc8f";
+		document.getElementById("hereHealthPoints2").style.backgroundColor = "#FF7F7F";
+	}
+	else if (hp1 < hp2)
+	{
+		document.getElementById("hereHealthPoints2").style.backgroundColor = "#8fbc8f";
+		document.getElementById("hereHealthPoints").style.backgroundColor = "#FF7F7F";
+	}
+	else
+	{
+		document.getElementById("hereHealthPoints").style.backgroundColor = "";
+		document.getElementById("hereHealthPoints2").style.backgroundColor = "";
+	}
+
+	if (hpRegen1 > hpRegen2)
+	{
+		document.getElementById("hereHealthRegen").style.backgroundColor = "#8fbc8f";
+		document.getElementById("hereHealthRegen2").style.backgroundColor = "#FF7F7F";
+	}
+	else if (hpRegen1 < hpRegen2)
+	{
+		document.getElementById("hereHealthRegen2").style.backgroundColor = "#8fbc8f";
+		document.getElementById("hereHealthRegen").style.backgroundColor = "#FF7F7F";
+	}
+	else
+	{
+		document.getElementById("hereHealthRegen").style.backgroundColor = "";
+		document.getElementById("hereHealthRegen2").style.backgroundColor = "";
+	}
+
+	if (mp1 > mp2)
+	{
+		document.getElementById("hereManaPoints").style.backgroundColor = "#8fbc8f";
+		document.getElementById("hereManaPoints2").style.backgroundColor = "#FF7F7F";
+	}
+	else if (mp1 < mp2)
+	{
+		document.getElementById("hereManaPoints2").style.backgroundColor = "#8fbc8f";
+		document.getElementById("hereManaPoints").style.backgroundColor = "#FF7F7F";
+	}
+	else
+	{
+		document.getElementById("hereManaPoints").style.backgroundColor = "";
+		document.getElementById("hereManaPoints2").style.backgroundColor = "";
+	}
+
+	if (mpRegen1 > mpRegen2)
+	{
+		document.getElementById("hereManaRegen").style.backgroundColor = "#8fbc8f";
+		document.getElementById("hereManaRegen2").style.backgroundColor = "#FF7F7F";
+	}
+	else if (mpRegen1 < mpRegen2)
+	{
+		document.getElementById("hereManaRegen2").style.backgroundColor = "#8fbc8f";
+		document.getElementById("hereManaRegen").style.backgroundColor = "#FF7F7F";
+	}
+	else
+	{
+		document.getElementById("hereManaRegen").style.backgroundColor = "";
+		document.getElementById("hereManaRegen2").style.backgroundColor = "";
 	}
 }
