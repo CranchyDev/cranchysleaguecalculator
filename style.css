@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body defaults */
+body {
+  background-color: #b0e0d0;  
+  font-family: sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header section (dark blue bar at top) */
+header {
+  width: 100%;
+  background-color: #003366;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 28px;
+  color: white;
+  margin: 0;
+}
+
+/* Navbar layout */
+nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  font-size: 32px;
+  color: white;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  background-color: #333;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  text-shadow: -1px 1px #000000;
+  width: 400px;
+  text-align: center;
+}
+
+nav a:visited{
+  color: white;
+}
+
+nav a:hover{
+  font-size: 32.5px;
+  transform: scale(1.05);
+  background-color: black;
+}
+
+nav a:active {
+  font-size: 32.5px;
+  transform: scale(1.05);
+  background-color: black;
+}
+
+/* Box containing the dropdown menu */
+.box {
+  margin-top: 50px; /* space below the header */
+  background-color: #e8f4f0;
+  align-items: center;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Button styling */
+#dropbtn,
+#dropbtn2,
+#levelbtn,
+#levelbtn2 {
+  background-color: #333;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+/* Dropdown list */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 150px;
+  z-index: 1;
+  max-height: 300px;
+  overflow-y: auto;
+  top: 100%;
+  left: 0;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+/* Links inside */
+.dropdown-content a {
+  color: white;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+}
+
+.show {display: block;}
+
+.selectedChampion:hover {
+	font-size: 22px;
+	background-color: black;
+}
+
+.selectedChampion2:hover {
+	font-size: 22px;
+	background-color: black;
+}
+
+.selectedLevel:hover {
+	font-size: 22px;
+	background-color: black;
+}
+
+.selectedLevel2:hover {
+	font-size: 22px;
+	background-color: black;
+}
+
+.selected-box{
+  margin-top: 10px;
+  display: column;
+  background-color: #1b1b1b;
+  color: #00ffcc;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#championStats {
+  vertical-align: top;      /* keep it top-aligned in the parent table */
+  padding-top: 50px;        /* adds breathing room */
+  padding-left: 5px;       /* space away from left edge */
+  padding-right: 50px;
+  font-size: 24px;
+}
+
+#championStats2 {
+  vertical-align: top;      /* keep it top-aligned in the parent table */
+  padding-top: 50px;        /* adds breathing room */
+  padding-right: 5px;       /* space away from right edge */
+  padding-left: 50px;
+  font-size: 24px;
+
+}
+
+#championStatsTable,
+#championStatsTable2 {
+  margin: 0;
+  table-layout: fixed; /* prevents table from resizing to fit content */
+  width: 200px;        /* set total table width (adjust if needed) */
+  border-collapse: collapse; /* cleaner look */
+  background-color: #e8f4f0;     /* same soft mint tone as your boxes */
+  color: #003366;                /* dark blue text for contrast */
+  border: 1px solid #003366;     /* subtle outline matching header */
+  border-radius: 6px;
+}
+
+#championStatsTable th,
+#championStatsTable td {
+  padding: 2px 2px;         /* small consistent cell spacing */
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.1); /* soft divider */
+
+}
+
+#championStatsTable2 th,
+#championStatsTable2 td {
+	padding: 2px 2px; 
+	text-align: right;
+	border-bottom: 1px solid rgba(0,0,0,0.1); /* soft divider */
+}
+
+#championStatsTable th,
+#championStatsTable2 th {
+  background-color: #000000;     
+  color: #ffffff;                /* white header text */
+  font-weight: bold;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.image-box {
+  margin-top: 20px;
+  width: 210px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: none;
+}
+
+.createSpace {
+	height: 200px;
+}
+
+.riot-disclaimer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #e8f4f0;  /* matches your box background */
+  color: black;
+  font-style: italic;
+  font-size: 14px;
+  padding: 8px 0;
+  border-top: 1px solid #333;
+  z-index: 100;
+}
+
+/* ----------- Additional Mobile Fixes (Champion boxes, tables, layout) ----------- */
+@media (max-width: 768px) {
+
+  /* Make the entire page stack naturally */
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Stack .box containers vertically */
+  .box {
+    width: 95%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Center dropdowns & buttons inside boxes */
+  .dropdown {
+    width: 100%;
+    align-items: center;
+  }
+
+  #dropbtn,
+  #dropbtn2,
+  #levelbtn,
+  #levelbtn2 {
+    width: 80%;
+    max-width: 240px;
+    font-size: 16px;
+  }
+
+  /* Champion stats tables become full width, smaller font */
+  #championStats,
+  #championStats2 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  #championStatsTable,
+  #championStatsTable2 {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  #championStatsTable th,
+  #championStatsTable2 th {
+    font-size: 14px;
+  }
+
+  #championStatsTable td,
+  #championStatsTable2 td {
+    font-size: 14px;
+  }
+
+  /* Keep the image centered and scaled properly */
+  .image-box {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Fix navbar stacking and prevent overflow */
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  /* Donation section spacing above footer */
+  .donation-section {
+    position: static;
+    margin: 60px auto 120px auto;
+    text-align: center;
+  }
+
+  /* Ensure footer doesn’t cover bottom content */
+  .riot-disclaimer {
+    position: relative;
+    bottom: 0;
+  }
+}

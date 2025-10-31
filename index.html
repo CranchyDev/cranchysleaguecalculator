@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cranchy's League Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 style="font-size:40px" class="bebas-neue-regular">Cranchy's League Calculator</h1>
+  </header>
+
+<nav class="bebas-neue-regular">
+
+  <a href="index.html">
+    <p>Simple Champion Calculator</p>
+  </a>
+
+    <a href="advancedchampioncalculator.html">
+    <p>Advanced Champion Calculator</p>
+    </a>
+
+  <a href="matchupcalculator.html">
+    <p>Matchup Calculator</p>
+  </a>
+
+  <a href="duocalculator.html">
+    <p>Duo Calculator</p>
+  </a>
+
+  <a href="teamcalculator.html">
+    <p>Team Calculator</p>
+  </a>
+
+</nav>
+
+<main>
+
+<table style="width:100%"> <!-- Big table calculator starts here -->
+  <tr> <!-- Big row of calculator starts here -->
+
+    <th> <!-- Big header of calculator starts here -->
+    
+      <div class="box"> <!-- Box div class starts here -->
+        <div class="dropdown">
+            <button id="dropbtn" onclick="displayChampions()">Expand</button>
+                <div id="championsList" class="dropdown-content">
+
+                Champions
+                <p class="selectedChampion" onclick="displayChampions()">Aatrox</p>
+                <p class="selectedChampion" onclick="displayChampions()">Ahri</p>
+                <p class="selectedChampion" onclick="displayChampions()">Akali</p>
+                <p class="selectedChampion" onclick="displayChampions()">Akshan</p>
+                <p class="selectedChampion" onclick="displayChampions()">Alistar</p>
+                <p class="selectedChampion" onclick="displayChampions()">Ambessa</p>
+                <p class="selectedChampion" onclick="displayChampions()">Amumu</p>
+                <p class="selectedChampion" onclick="displayChampions()">Anivia</p>
+                <p class="selectedChampion" onclick="displayChampions()">Annie</p>
+                <p class="selectedChampion" onclick="displayChampions()">Aphelios</p>
+                <p class="selectedChampion" onclick="displayChampions()">Ashe</p>
+                <p class="selectedChampion" onclick="displayChampions()">Aurelion Sol</p>
+                <p class="selectedChampion" onclick="displayChampions()">Aurora</p>
+                <p class="selectedChampion" onclick="displayChampions()">Azir</p>
+                <p class="selectedChampion" onclick="displayChampions()">Bard</p>
+                <p class="selectedChampion" onclick="displayChampions()">Bel'Veth</p>
+                <p class="selectedChampion" onclick="displayChampions()">Blitzcrank</p>
+                <p class="selectedChampion" onclick="displayChampions()">Brand</p>
+                <p class="selectedChampion" onclick="displayChampions()">Braum</p>
+                <p class="selectedChampion" onclick="displayChampions()">Briar</p>
+                <p class="selectedChampion" onclick="displayChampions()">Caitlyn</p>
+                <p class="selectedChampion" onclick="displayChampions()">Camille</p>
+                <p class="selectedChampion" onclick="displayChampions()">Cassiopeia</p>
+                <p class="selectedChampion" onclick="displayChampions()">Cho'Gath</p>
+                <p class="selectedChampion" onclick="displayChampions()">Corki</p>
+                <p class="selectedChampion" onclick="displayChampions()">Darius</p>
+                <p class="selectedChampion" onclick="displayChampions()">Diana</p>
+                <p class="selectedChampion" onclick="displayChampions()">Dr. Mundo</p>
+                <p class="selectedChampion" onclick="displayChampions()">Draven</p>
+                <p class="selectedChampion" onclick="displayChampions()">Ekko</p>
+                <p class="selectedChampion" onclick="displayChampions()">Elise</p>
+                <p class="selectedChampion" onclick="displayChampions()">Evelynn</p>
+                <p class="selectedChampion" onclick="displayChampions()">Ezreal</p>
+                <p class="selectedChampion" onclick="displayChampions()">Fiddlesticks</p>
+                <p class="selectedChampion" onclick="displayChampions()">Fiora</p>
+                <p class="selectedChampion" onclick="displayChampions()">Fizz</p>
+                <p class="selectedChampion" onclick="displayChampions()">Galio</p>
+                <p class="selectedChampion" onclick="displayChampions()">Gangplank</p>
+                <p class="selectedChampion" onclick="displayChampions()">Garen</p>
+                <p class="selectedChampion" onclick="displayChampions()">Gnar</p>
+                <p class="selectedChampion" onclick="displayChampions()">Mega Gnar</p>
+                <p class="selectedChampion" onclick="displayChampions()">Gragas</p>
+                <p class="selectedChampion" onclick="displayChampions()">Graves</p>
+                <p class="selectedChampion" onclick="displayChampions()">Gwen</p>
+                <p class="selectedChampion" onclick="displayChampions()">Hecarim</p>
+                <p class="selectedChampion" onclick="displayChampions()">Heimerdinger</p>
+                <p class="selectedChampion" onclick="displayChampions()">Hwei</p>
+                <p class="selectedChampion" onclick="displayChampions()">Illaoi</p>
+                <p class="selectedChampion" onclick="displayChampions()">Irelia</p>
+                <p class="selectedChampion" onclick="displayChampions()">Ivern</p>
+                <p class="selectedChampion" onclick="displayChampions()">Janna</p>
+                <p class="selectedChampion" onclick="displayChampions()">Jarvan IV</p>
+                <p class="selectedChampion" onclick="displayChampions()">Jax</p>
+                <p class="selectedChampion" onclick="displayChampions()">Jayce</p>
+                <p class="selectedChampion" onclick="displayChampions()">Jhin</p>
+                <p class="selectedChampion" onclick="displayChampions()">Jinx</p>
+                <p class="selectedChampion" onclick="displayChampions()">K'Sante</p>
+                <p class="selectedChampion" onclick="displayChampions()">Kai'Sa</p>
+                <p class="selectedChampion" onclick="displayChampions()">Kalista</p>
+                <p class="selectedChampion" onclick="displayChampions()">Karma</p>
+                <p class="selectedChampion" onclick="displayChampions()">Karthus</p>
+                <p class="selectedChampion" onclick="displayChampions()">Kassadin</p>
+                <p class="selectedChampion" onclick="displayChampions()">Katarina</p>
+                <p class="selectedChampion" onclick="displayChampions()">Kayle</p>
+                <p class="selectedChampion" onclick="displayChampions()">Kayn</p>
+                <p class="selectedChampion" onclick="displayChampions()">Kennen</p>
+                <p class="selectedChampion" onclick="displayChampions()">Kha'Zix</p>
+                <p class="selectedChampion" onclick="displayChampions()">Kindred</p>
+                <p class="selectedChampion" onclick="displayChampions()">Kled</p>
+                <p class="selectedChampion" onclick="displayChampions()">Kog'Maw</p>
+                <p class="selectedChampion" onclick="displayChampions()">LeBlanc</p>
+                <p class="selectedChampion" onclick="displayChampions()">Lee Sin</p>
+                <p class="selectedChampion" onclick="displayChampions()">Leona</p>
+                <p class="selectedChampion" onclick="displayChampions()">Lillia</p>
+                <p class="selectedChampion" onclick="displayChampions()">Lissandra</p>
+                <p class="selectedChampion" onclick="displayChampions()">Lucian</p>
+                <p class="selectedChampion" onclick="displayChampions()">Lulu</p>
+                <p class="selectedChampion" onclick="displayChampions()">Lux</p>
+                <p class="selectedChampion" onclick="displayChampions()">Malphite</p>
+                <p class="selectedChampion" onclick="displayChampions()">Malzahar</p>
+                <p class="selectedChampion" onclick="displayChampions()">Maokai</p>
+                <p class="selectedChampion" onclick="displayChampions()">Master Yi</p>
+                <p class="selectedChampion" onclick="displayChampions()">Mel</p>
+                <p class="selectedChampion" onclick="displayChampions()">Milio</p>
+                <p class="selectedChampion" onclick="displayChampions()">Miss Fortune</p>
+                <p class="selectedChampion" onclick="displayChampions()">Mordekaiser</p>
+                <p class="selectedChampion" onclick="displayChampions()">Morgana</p>
+                <p class="selectedChampion" onclick="displayChampions()">Naafiri</p>
+                <p class="selectedChampion" onclick="displayChampions()">Nami</p>
+                <p class="selectedChampion" onclick="displayChampions()">Nasus</p>
+                <p class="selectedChampion" onclick="displayChampions()">Nautilus</p>
+                <p class="selectedChampion" onclick="displayChampions()">Neeko</p>
+                <p class="selectedChampion" onclick="displayChampions()">Nidalee</p>
+                <p class="selectedChampion" onclick="displayChampions()">Nilah</p>
+                <p class="selectedChampion" onclick="displayChampions()">Nocturne</p>
+                <p class="selectedChampion" onclick="displayChampions()">Nunu and Willump</p>
+                <p class="selectedChampion" onclick="displayChampions()">Olaf</p>
+                <p class="selectedChampion" onclick="displayChampions()">Orianna</p>
+                <p class="selectedChampion" onclick="displayChampions()">Ornn</p>
+                <p class="selectedChampion" onclick="displayChampions()">Pantheon</p>
+                <p class="selectedChampion" onclick="displayChampions()">Poppy</p>
+                <p class="selectedChampion" onclick="displayChampions()">Pyke</p>
+                <p class="selectedChampion" onclick="displayChampions()">Qiyana</p>
+                <p class="selectedChampion" onclick="displayChampions()">Quinn</p>
+                <p class="selectedChampion" onclick="displayChampions()">Rakan</p>
+                <p class="selectedChampion" onclick="displayChampions()">Rammus</p>
+                <p class="selectedChampion" onclick="displayChampions()">Rek'Sai</p>
+                <p class="selectedChampion" onclick="displayChampions()">Rell</p>
+                <p class="selectedChampion" onclick="displayChampions()">Renata Glasc</p>
+                <p class="selectedChampion" onclick="displayChampions()">Renekton</p>
+                <p class="selectedChampion" onclick="displayChampions()">Rengar</p>
+                <p class="selectedChampion" onclick="displayChampions()">Riven</p>
+                <p class="selectedChampion" onclick="displayChampions()">Rumble</p>
+                <p class="selectedChampion" onclick="displayChampions()">Ryze</p>
+                <p class="selectedChampion" onclick="displayChampions()">Samira</p>
+                <p class="selectedChampion" onclick="displayChampions()">Sejuani</p>
+                <p class="selectedChampion" onclick="displayChampions()">Senna</p>
+                <p class="selectedChampion" onclick="displayChampions()">Seraphine</p>
+                <p class="selectedChampion" onclick="displayChampions()">Sett</p>
+                <p class="selectedChampion" onclick="displayChampions()">Shaco</p>
+                <p class="selectedChampion" onclick="displayChampions()">Shen</p>
+                <p class="selectedChampion" onclick="displayChampions()">Shyvana</p>
+                <p class="selectedChampion" onclick="displayChampions()">Singed</p>
+                <p class="selectedChampion" onclick="displayChampions()">Sion</p>
+                <p class="selectedChampion" onclick="displayChampions()">Sivir</p>
+                <p class="selectedChampion" onclick="displayChampions()">Skarner</p>
+                <p class="selectedChampion" onclick="displayChampions()">Smolder</p>
+                <p class="selectedChampion" onclick="displayChampions()">Sona</p>
+                <p class="selectedChampion" onclick="displayChampions()">Soraka</p>
+                <p class="selectedChampion" onclick="displayChampions()">Swain</p>
+                <p class="selectedChampion" onclick="displayChampions()">Sylas</p>
+                <p class="selectedChampion" onclick="displayChampions()">Syndra</p>
+                <p class="selectedChampion" onclick="displayChampions()">Tahm Kench</p>
+                <p class="selectedChampion" onclick="displayChampions()">Taliyah</p>
+                <p class="selectedChampion" onclick="displayChampions()">Talon</p>
+                <p class="selectedChampion" onclick="displayChampions()">Taric</p>
+                <p class="selectedChampion" onclick="displayChampions()">Teemo</p>
+                <p class="selectedChampion" onclick="displayChampions()">Thresh</p>
+                <p class="selectedChampion" onclick="displayChampions()">Tristana</p>
+                <p class="selectedChampion" onclick="displayChampions()">Trundle</p>
+                <p class="selectedChampion" onclick="displayChampions()">Tryndamere</p>
+                <p class="selectedChampion" onclick="displayChampions()">Twisted Fate</p>
+                <p class="selectedChampion" onclick="displayChampions()">Twitch</p>
+                <p class="selectedChampion" onclick="displayChampions()">Udyr</p>
+                <p class="selectedChampion" onclick="displayChampions()">Urgot</p>
+                <p class="selectedChampion" onclick="displayChampions()">Varus</p>
+                <p class="selectedChampion" onclick="displayChampions()">Vayne</p>
+                <p class="selectedChampion" onclick="displayChampions()">Veigar</p>
+                <p class="selectedChampion" onclick="displayChampions()">Vel'Koz</p>
+                <p class="selectedChampion" onclick="displayChampions()">Vex</p>
+                <p class="selectedChampion" onclick="displayChampions()">Vi</p>
+                <p class="selectedChampion" onclick="displayChampions()">Viego</p>
+                <p class="selectedChampion" onclick="displayChampions()">Viktor</p>
+                <p class="selectedChampion" onclick="displayChampions()">Vladimir</p>
+                <p class="selectedChampion" onclick="displayChampions()">Volibear</p>
+                <p class="selectedChampion" onclick="displayChampions()">Warwick</p>
+                <p class="selectedChampion" onclick="displayChampions()">Wukong</p>
+                <p class="selectedChampion" onclick="displayChampions()">Xayah</p>
+                <p class="selectedChampion" onclick="displayChampions()">Xerath</p>
+                <p class="selectedChampion" onclick="displayChampions()">Xin Zhao</p>
+                <p class="selectedChampion" onclick="displayChampions()">Yasuo</p>
+                <p class="selectedChampion" onclick="displayChampions()">Yone</p>
+                <p class="selectedChampion" onclick="displayChampions()">Yorick</p>
+                <p class="selectedChampion" onclick="displayChampions()">Yunara</p>
+                <p class="selectedChampion" onclick="displayChampions()">Yuumi</p>
+                <p class="selectedChampion" onclick="displayChampions()">Zac</p>
+                <p class="selectedChampion" onclick="displayChampions()">Zed</p>
+                <p class="selectedChampion" onclick="displayChampions()">Zeri</p>
+                <p class="selectedChampion" onclick="displayChampions()">Ziggs</p>
+                <p class="selectedChampion" onclick="displayChampions()">Zilean</p>
+                <p class="selectedChampion" onclick="displayChampions()">Zoe</p>
+                <p class="selectedChampion" onclick="displayChampions()">Zyra</p>
+
+                </div>
+        </div>
+                <br>
+
+                <div class="dropdown"> 
+                    <button id="levelbtn" onclick="displayLevel()">Level</button>
+                        <div id="levelList" class="dropdown-content">
+
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">1</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">2</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">3</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">4</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">5</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">6</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">7</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">8</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">9</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">10</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">11</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">12</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">13</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">14</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">15</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">16</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">17</p>
+                        <p class="selectedLevel" onclick="calculateStatsWithLevel(this)">18</p>
+                        </div>
+                </div> <!-- End of level-dropdown div class -->
+
+                <div class="selected-box"> 
+                        <p id="putSomethingHere"></p> <!-- Name of selected champion -->
+                </div>
+
+                <div class="image-box"> 
+                <img id="menu-image" src="" alt="Menu Image" /> <!-- Image of selected champion -->
+                </div> 
+
+    </div> <!-- Box div class ends here -->
+
+    </th>
+
+    <th id="championStats">
+    
+
+        <table id="championStatsTable">
+
+            <tr>
+                <th>Stat</th>
+                <th>Value</th>
+            </tr>
+
+            <tr>
+                <td>AD</td>
+                <td id="hereAttackDamage"></td>
+            </tr>
+
+            <tr>
+                <td>AP</td>
+                <td id="hereAbilityPower"></td>
+            </tr>
+
+            <tr>
+                <td>AS</td>
+                <td id="hereAttackSpeed"></td>
+            </tr>
+
+            <tr>
+                <td>AH</td>
+                <td id="hereAbilityHaste"></td>
+            </tr>
+
+            <tr>
+                <td>CSC</td>
+                <td id="hereCriticalChance"></td>
+            </tr>
+
+            <tr>
+                <td>HP</td>
+                <td id="hereHealthPoints"></td>
+            </tr>
+
+            <tr>
+                <td>MP</td>
+                <td id="hereManaPoints"></td>
+            </tr>
+
+            <tr>
+                <td>AR</td>
+                <td id="hereArmor"></td>
+            </tr>
+
+            <tr>
+                <td>MR</td>
+                <td id="hereMagicResistance"></td>
+            </tr>
+
+            <tr>
+                <td>MS</td>
+                <td id="hereMovementSpeed"></td>
+            </tr>
+
+        </table>
+
+    
+    </th>
+
+    <th id="championStats2">
+    
+        <table id="championStatsTable2">
+
+            <tr>
+                <th>Value</th>
+                <th>Stat</th>
+            </tr>
+
+            <tr>
+                <td id="hereAttackDamage2"></td>
+                <td>AD</td>
+            </tr>
+
+            <tr>
+                <td id="hereAbilityPower2"></td>
+                <td>AP</td>
+            </tr>
+
+            <tr>
+                <td id="hereAttackSpeed2"></td>
+                <td>AS</td>
+            </tr>
+
+            <tr>
+                <td id="hereAbilityHaste2"></td>
+                <td>AH</td>
+            </tr>
+
+            <tr>
+                <td id="hereCriticalChance2"></td>
+                <td>CSC</td>
+            </tr>
+
+            <tr>
+                <td id="hereArmor2"></td>
+                <td>AR</td>
+            </tr>
+
+            <tr>
+                <td id="hereMagicResistance2"></td>
+                <td>MR</td>
+            </tr>
+
+            <tr>
+                <td id="hereMovementSpeed2"></td>
+                <td>MS</td>
+            </tr>
+
+        </table>
+    
+    </th>
+
+    <th>
+
+    <div class="box">
+        <div class="dropdown">
+            <button id="dropbtn2" onclick="displayChampions2()">Expand</button>
+
+                <div id="championsList2" class="dropdown-content">
+
+                Champions
+                <p class="selectedChampion2" onclick="displayChampions2()">Aatrox</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Ahri</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Akali</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Akshan</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Alistar</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Ambessa</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Amumu</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Anivia</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Annie</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Aphelios</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Ashe</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Aurelion Sol</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Aurora</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Azir</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Bard</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Bel'Veth</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Blitzcrank</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Brand</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Braum</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Briar</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Caitlyn</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Camille</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Cassiopeia</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Cho'Gath</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Corki</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Darius</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Diana</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Dr. Mundo</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Draven</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Ekko</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Elise</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Evelynn</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Ezreal</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Fiddlesticks</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Fiora</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Fizz</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Galio</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Gangplank</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Garen</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Gnar</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Mega Gnar</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Gragas</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Graves</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Gwen</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Hecarim</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Heimerdinger</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Hwei</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Illaoi</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Irelia</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Ivern</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Janna</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Jarvan IV</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Jax</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Jayce</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Jhin</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Jinx</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">K'Sante</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Kai'Sa</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Kalista</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Karma</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Karthus</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Kassadin</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Katarina</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Kayle</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Kayn</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Kennen</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Kha'Zix</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Kindred</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Kled</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Kog'Maw</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">LeBlanc</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Lee Sin</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Leona</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Lillia</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Lissandra</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Lucian</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Lulu</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Lux</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Malphite</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Malzahar</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Maokai</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Master Yi</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Mel</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Milio</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Miss Fortune</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Mordekaiser</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Morgana</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Naafiri</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Nami</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Nasus</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Nautilus</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Neeko</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Nidalee</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Nilah</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Nocturne</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Nunu and Willump</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Olaf</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Orianna</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Ornn</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Pantheon</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Poppy</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Pyke</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Qiyana</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Quinn</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Rakan</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Rammus</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Rek'Sai</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Rell</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Renata Glasc</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Renekton</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Rengar</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Riven</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Rumble</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Ryze</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Samira</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Sejuani</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Senna</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Seraphine</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Sett</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Shaco</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Shen</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Shyvana</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Singed</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Sion</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Sivir</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Skarner</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Smolder</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Sona</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Soraka</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Swain</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Sylas</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Syndra</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Tahm Kench</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Taliyah</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Talon</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Taric</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Teemo</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Thresh</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Tristana</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Trundle</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Tryndamere</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Twisted Fate</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Twitch</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Udyr</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Urgot</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Varus</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Vayne</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Veigar</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Vel'Koz</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Vex</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Vi</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Viego</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Viktor</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Vladimir</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Volibear</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Warwick</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Wukong</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Xayah</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Xerath</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Xin Zhao</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Yasuo</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Yone</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Yorick</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Yunara</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Yuumi</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Zac</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Zed</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Zeri</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Ziggs</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Zilean</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Zoe</p>
+                <p class="selectedChampion2" onclick="displayChampions2()">Zyra</p>
+
+                </div>
+        </div>
+
+                <br>
+
+                <div class="dropdown"> 
+                    <button id="levelbtn2" onclick="displayLevel2()">Level</button>
+                        <div id="levelList2" class="dropdown-content">
+
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">1</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">2</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">3</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">4</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">5</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">6</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">7</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">8</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">9</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">10</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">11</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">12</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">13</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">14</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">15</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">16</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">17</p>
+                        <p class="selectedLevel2" onclick="calculateStatsWithLevelAgain(this)">18</p>
+                        </div>
+                </div> <!-- End of level-dropdown div class -->
+
+                <div class="selected-box"> 
+                        <p id="putSomethingHere2"></p> <!-- Name of selected champion -->
+                </div>
+
+                <div class="image-box"> 
+                <img id="menu-image2" src="" alt="Menu Image" /> <!-- Image of selected champion -->
+                </div> 
+    </div>
+
+    </th>
+  </tr> <!-- Big row of calculator ends here -->
+</table> <!-- Big table calculator ends here -->
+
+</main>
+
+
+<br>
+
+
+<img src ="filloutspace.jpg" width="10" height="350"/>
+
+
+<h2 style="font-size:14px; color:black">Like this tool? Consider buying me a <s>coffee</s> bottle of water. I don't like coffee. Yuck!</h2>
+<br>
+  <!-- PayPal Donation Button -->
+  <form action="https://paypal.me/iurrui" method="post" target="_blank" style="margin-bottom: 80px;">
+    <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_BUTTON_ID_HERE" />
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="Donate with PayPal" alt="Donate with PayPal button"/>
+    <img alt="" border="0" src="https://www.paypal.com/en_PT/i/scr/pixel.gif" width="1" height="1"/>
+  </form>
+
+<footer class="riot-disclaimer">
+
+<i>Cranchy's League Calculator was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.</i>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
